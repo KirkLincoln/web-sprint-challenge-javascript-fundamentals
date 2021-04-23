@@ -193,7 +193,6 @@ function CuboidMaker(schematics){
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
   const cuboid = new CuboidMaker(4, 5, 5);
-  console.log("Cuboid Thing: ", cuboid.length);
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
@@ -235,14 +234,15 @@ class CubeMaker extends CuboidMaker {
     super(props);
   }
   surfaceArea(){
-    return 2 * (props.length * props.width + props.length * props.height + props.width * props.height);
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 
   volume() {
-    return props.length*props.width*props.height;
+    return this.length * this.width * this.height;
   }
 }
 
+const cuber = new CubeMaker(4, 5, 5);
 
 
 
