@@ -161,10 +161,10 @@ function greeting(first_name, last_name){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-  this.length = length;
-  this.width  = width;
-  this.height = height;
+function CuboidMaker(schematics){
+  this.length = schematics.length;
+  this.width  = schematics.width;
+  this.height = schematics.height;
 }
 
 
@@ -172,7 +172,7 @@ function CuboidMaker(length, width, height){
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
   CuboidMaker.prototype.volume = function(length, width, height) {
-    return length*width*height;
+    return length * width * height;
   }
 
 
@@ -206,10 +206,10 @@ function CuboidMaker(length, width, height){
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-  constructor(length, width, height) {
-    this.length = length;
-    this.width  = width;
-    this.height = height; 
+  constructor(schematics) {
+    this.length = schematics.length;
+    this.width  = schematics.width;
+    this.height = schematics.height; 
   }
 
   surfaceArea(){
