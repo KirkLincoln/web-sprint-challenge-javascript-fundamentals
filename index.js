@@ -16,9 +16,14 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
+/* A nested function inherits the lexical environment fromm it's parent function; whereas, the internal function 
+is finished executing before the parent is finished executing.  Since the order of execution handles the parent last,
+the container "internal" exists throughout the duration of nestedFunction's lifecycle.  Therefore, it is accessible 
+within the nested function.
 
-
-
+Since nestedFunction is inside of myFunction they share details with each other.  
+The first function to finish is nestedFunction, which is when "internal"
+*/
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */

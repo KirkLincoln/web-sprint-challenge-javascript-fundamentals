@@ -28,14 +28,36 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+    .forEach: executes a function for each element in an array.
+        - safe way to use a for loop
+        - cannot be stopped when started
+        - does not return an array but allows mutating of data
+        - always returns undefineds so it uses less memory than .map
+
+    .map: returns a new array with an operation performed on every element in the array.
+        - If you aren't using the array returned then use forEach
+        - .map uses memory to store return values
+
+    same: 
+        - Both require a callback function
+        - Can use arrow function or function syntax
+        - Either function is part of the functional paradigm 
+          and supports pure functional programming.
+        - Technically the .map can accomplish ALMOST every task that a .foreach can.
 
 2. Explain the difference between a callback and a higher order function.
+    A callback function is passed as a parameter to another function and invoked within that lexical environment.
 
+    A higher order function takes other functions as it's argument and/or returns a function.
 3. What is closure?
-
+    Closure allows inner functions to "inherit" the lexical environment, in the function, from where it is being executed.
 4. Describe the four rules of the 'this' keyword.
-
+    1. When 'this' is called outside of a function it returns the window object.
+    2. If a function is invoked with a preceding dot, the object to the left of the dot is 'this'.
+    3. Whenever a constructor is used, this references the name of that instance/object.
+    4. If .call or .apply are used they are explicit in nature.
 5. Why do we need super() in an extended class?
+    Super allows the current class to inherit the prototype chain of the parent, thus all of the qualities of the extended (Parent) class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
